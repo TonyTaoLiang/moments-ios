@@ -16,7 +16,7 @@ enum InternalMenuItemType: String {
 protocol InternalMenuItemViewModel {
     var type: InternalMenuItemType { get }
     var title: String { get }
-    
+
     func select()
 }
 

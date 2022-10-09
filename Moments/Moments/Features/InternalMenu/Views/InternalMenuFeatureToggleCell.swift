@@ -16,17 +16,15 @@ class InternalMenuFeatureToggleCell: UITableViewCell, InternalMenuCellType {
     }
     private var item: InternalMenuFeatureToggleItemViewModel?
     private lazy var disposeBag: DisposeBag = DisposeBag()
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
         setupBindings()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     func update(with item: InternalMenuItemViewModel) {
         guard let item = item as? InternalMenuFeatureToggleItemViewModel else { return }
         self.item = item
@@ -40,7 +38,6 @@ extension InternalMenuFeatureToggleCell {
         accessoryView = switchControl
         selectionStyle = .none
     }
-    
     func setupBindings() {
         switchControl.rx.isOn.changed
             .distinctUntilChanged()
@@ -50,5 +47,4 @@ extension InternalMenuFeatureToggleCell {
             })
             .disposed(by: disposeBag)
     }
-    
 }

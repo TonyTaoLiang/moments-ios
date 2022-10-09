@@ -7,7 +7,7 @@
 
 import RxDataSources
 
-struct InternalMenuSection: SectionModelType{
+struct InternalMenuSection: SectionModelType {
     let title: String
     let items: [InternalMenuItemViewModel]
     let footer: String?
@@ -17,7 +17,6 @@ struct InternalMenuSection: SectionModelType{
         self.items = items
         self.footer = footer
     }
-    
     init(original: InternalMenuSection, items: [InternalMenuItemViewModel]) {
         self.init(original.title, items, original.footer)
     }

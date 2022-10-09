@@ -9,6 +9,12 @@ import UIKit
 import DesignKit
 
 class ViewController: UIViewController {
+    lazy var myButton: UIButton = configure(UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))) {
+        $0.setTitle("Push", for: .normal)
+        $0.setTitleColor(UIColor.black, for: .normal)
+        $0.addTarget(self, action: #selector(push), for: .touchUpInside)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,7 +31,11 @@ class ViewController: UIViewController {
         if !InternalTogglesDataStore.shared.isToggleOn(InternalToggle.isLikeButtonForMomentEnabled) {
             print("isLikeButtonForMomentEnabled:false")
         }
-        self.navigationController?.pushViewController(InternalMenuViewController(), animated: true)
-        
+        view.addSubview(self.myButton)
+    }
+    
+    @objc func push() {
+//        self.navigationController?.pushViewController(InternalMenuViewController(), animated: true)
+        self.present(InternalMenuViewController(), animated: true, completion: nil)
     }
 }

@@ -9,8 +9,8 @@ import Foundation
 
 final class InternalMenuCrashAppItemViewModel: InternalMenuActionTriggerItemViewModel {
     override var title: String { "CrashAPP" }
-    
+
     override func select() {
-        fatalError()
+        fatalError("CrashTest")
     }
 }
