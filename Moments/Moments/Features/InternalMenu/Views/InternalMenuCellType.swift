@@ -8,5 +8,5 @@
 import UIKit
 
 protocol InternalMenuCellType {
-
+    func update(with item: InternalMenuItemViewModel)
 }

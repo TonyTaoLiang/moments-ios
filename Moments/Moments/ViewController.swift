@@ -25,5 +25,7 @@ class ViewController: UIViewController {
         if !InternalTogglesDataStore.shared.isToggleOn(InternalToggle.isLikeButtonForMomentEnabled) {
             print("isLikeButtonForMomentEnabled:false")
         }
+        self.navigationController?.pushViewController(InternalMenuViewController(), animated: true)
+        
     }
 }
