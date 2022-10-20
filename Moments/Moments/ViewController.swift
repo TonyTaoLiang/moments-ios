@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         }
         view.addSubview(self.myButton)
     }
-    
+
     @objc func push() {
 //        self.navigationController?.pushViewController(InternalMenuViewController(), animated: true)
         self.present(InternalMenuViewController(), animated: true, completion: nil)

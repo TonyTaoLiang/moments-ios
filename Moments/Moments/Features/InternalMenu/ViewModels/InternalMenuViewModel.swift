@@ -25,6 +25,6 @@ struct InternalMenuViewModel: InternalMenuViewModelType {
             "Tools",
             [InternalMenuCrashAppItemViewModel()]
         )
-        setions = .just([infoSection,featureTogglesSection,toolsSection])
+        setions = .just([infoSection, featureTogglesSection, toolsSection])
     }
 }

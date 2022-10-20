@@ -11,6 +11,6 @@ import Foundation
 class InternalMenuActionTriggerItemViewModel: InternalMenuItemViewModel {
     var type: InternalMenuItemType = .actionTrigger
     var title: String { fatalError("fatalErrorSubclassToImplement") }
-    
+
     func select() { fatalError("fatalErrorSubclassToImplement") }
 }

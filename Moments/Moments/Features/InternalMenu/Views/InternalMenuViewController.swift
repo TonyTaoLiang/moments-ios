@@ -53,7 +53,7 @@ extension InternalMenuViewController {
         }).disposed(by: disposeBag)
         navigationItem.rightBarButtonItem = dismissBarButtonItem
 
-        let dataSource = RxTableViewSectionedReloadDataSource<InternalMenuSection>(configureCell: {_, tableView,indexPath, item in
+        let dataSource = RxTableViewSectionedReloadDataSource<InternalMenuSection>(configureCell: {_, tableView, indexPath, item in
             let cell = tableView.dequeueReusableCell(withIdentifier: item.type.rawValue, for: indexPath)
             if let cell = cell as? InternalMenuCellType {
                 cell.update(with: item)
@@ -75,7 +75,7 @@ extension InternalMenuViewController {
                 self?.tableView.deselectRow(at: indexPath, animated: true)
             })
             .disposed(by: disposeBag)
-        
+
         tableView.rx
             .modelSelected(InternalMenuItemViewModel.self)
             .subscribe(onNext: { item in
