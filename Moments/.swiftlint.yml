@@ -129,7 +129,8 @@ only_rules:
 #included: # paths to include during linting
 #    - My_App_Directory
 included:
-  - "/Users/tonytaoliang/iOS/iOS开发进阶/moments-ios/Moments"
+#  - "/Users/tonytaoliang/iOS/iOS开发进阶/moments-ios/Moments"
+  - "/Users/chenying/Working/Demo/moments-ios/Moments"
   - "../Frameworks/DesignKit"
 
 excluded:
