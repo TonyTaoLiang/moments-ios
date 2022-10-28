@@ -17,7 +17,7 @@ struct InternalMenuViewModel: InternalMenuViewModelType {
     let title = "隐藏窗口"
     var setions: Observable<[InternalMenuSection]>
 
-    init() {
+    init(router: AppRouting, routingSourceProvider: @escaping RoutingSourceProvider) {
         let appVersion = "1.0.0.0"
         let infoSection = InternalMenuSection("General Info", [InternalMenuDescriptionItemViewModel(title: appVersion)])
         let featureTogglesSection = InternalMenuSection("Feature Toggles", [InternalMenuFeatureToggleItemViewModel("Like Button", InternalToggle.isLikeButtonForMomentEnabled, InternalTogglesDataStore.shared)])
@@ -25,6 +25,7 @@ struct InternalMenuViewModel: InternalMenuViewModelType {
             "Tools",
             [InternalMenuCrashAppItemViewModel()]
         )
-        setions = .just([infoSection, featureTogglesSection, toolsSection])
+        let designKit = InternalMenuSection("DesignKit", [InternalMenuDesignKitDemoItemViewModel(router, routingSourceProvider)])
+        setions = .just([infoSection, featureTogglesSection, toolsSection, designKit])
     }
 }

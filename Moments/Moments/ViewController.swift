@@ -8,13 +8,12 @@
 import UIKit
 import DesignKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     lazy var myButton: UIButton = configure(UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))) {
         $0.setTitle("Push", for: .normal)
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.addTarget(self, action: #selector(push), for: .touchUpInside)
     }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,6 +35,8 @@ class ViewController: UIViewController {
 
     @objc func push() {
 //        self.navigationController?.pushViewController(InternalMenuViewController(), animated: true)
-        self.present(InternalMenuViewController(), animated: true, completion: nil)
+//        self.present(InternalMenuViewController(), animated: true, completion: nil)
+        let router = AppRouter.shared
+        router.route(to: URL(string: "\(UniversalLinks.baseURL)InternalMenu"), from: self, using: .show)
     }
 }
