@@ -13,7 +13,10 @@ class ViewController: BaseViewController {
         $0.setTitle("Push", for: .normal)
         $0.setTitleColor(UIColor.black, for: .normal)
         $0.addTarget(self, action: #selector(push), for: .touchUpInside)
+        $0.titleLabel?.font = UIFont.designKit.body
+        $0.titleLabel?.adjustsFontForContentSizeCategory = true
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
