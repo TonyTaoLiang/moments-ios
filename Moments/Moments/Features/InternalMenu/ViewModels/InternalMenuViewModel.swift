@@ -25,7 +25,7 @@ struct InternalMenuViewModel: InternalMenuViewModelType {
             "Tools",
             [InternalMenuCrashAppItemViewModel()]
         )
-        let designKit = InternalMenuSection("DesignKit", [InternalMenuDesignKitDemoItemViewModel(router, routingSourceProvider)])
+        let designKit = InternalMenuSection(L10n.InternalMenu.designKitDemo, [InternalMenuDesignKitDemoItemViewModel(router, routingSourceProvider)])
         setions = .just([infoSection, featureTogglesSection, toolsSection, designKit])
     }
 }

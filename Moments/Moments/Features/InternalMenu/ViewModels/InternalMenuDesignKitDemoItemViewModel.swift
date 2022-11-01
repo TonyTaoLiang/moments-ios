@@ -15,7 +15,7 @@ final class InternalMenuDesignKitDemoItemViewModel: InternalMenuActionTriggerIte
         self.router = router
         self.routingSourceProvider = routingSourceProvider
     }
-    override var title: String {"DesignKitDemo"}
+    override var title: String { return L10n.InternalMenu.designKitDemo}
     override func select() {
         router.route(to: URL(string: "\(UniversalLinks.baseURL)DesignKit?productName=DesignKit&version=1.0.1"), from: routingSourceProvider(), using: .show)
     }
