@@ -11,9 +11,9 @@ import DesignKit
 class ViewController: BaseViewController {
     lazy var myButton: UIButton = configure(UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))) {
         $0.setTitle("Push", for: .normal)
-        $0.setTitleColor(UIColor.black, for: .normal)
+        $0.setTitleColor(UIColor.designKit.primary, for: .normal)
         $0.addTarget(self, action: #selector(push), for: .touchUpInside)
-        $0.titleLabel?.font = UIFont.designKit.body
+        $0.titleLabel?.font = UIFont.designKit.title1
         $0.titleLabel?.adjustsFontForContentSizeCategory = true
     }
 
