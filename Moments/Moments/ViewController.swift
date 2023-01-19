@@ -7,8 +7,10 @@
 
 import UIKit
 import DesignKit
+import RxSwift
 
 class ViewController: BaseViewController {
+    let posebag: DisposeBag = .init()
     lazy var myButton: UIButton = configure(UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))) {
         $0.setTitle("Push", for: .normal)
         $0.setTitleColor(UIColor.designKit.primary, for: .normal)
@@ -39,6 +41,11 @@ class ViewController: BaseViewController {
     @objc func push() {
 //        self.navigationController?.pushViewController(InternalMenuViewController(), animated: true)
 //        self.present(InternalMenuViewController(), animated: true, completion: nil)
+        GetMomentsByUserIDSession().getMoments(userID: 10).subscribe { event in
+            print(event)
+        } onError: { error in
+            print(error)
+        }.disposed(by: posebag )
         let router = AppRouter.shared
         router.route(to: URL(string: "\(UniversalLinks.baseURL)InternalMenu"), from: self, using: .show)
     }

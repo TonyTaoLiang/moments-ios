@@ -11,6 +11,13 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Development {
+    /// /graphql
+    internal static let graphqlPath = L10n.tr("Localizable", "development.graphqlPath")
+    /// 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
+    internal static let token = L10n.tr("Localizable", "development.token")
+  }
+
   internal enum InternalMenu {
     /// DesignKit Demo
     internal static let designKitDemo = L10n.tr("Localizable", "internalMenu.designKitDemo")

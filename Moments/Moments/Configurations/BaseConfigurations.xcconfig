@@ -10,4 +10,5 @@
 //
 // Store App base configurations like API URLs
 
-API_BASE_URL = momentsapi.herokuapp.com
+API_BASE_URL = api.github.com
+//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

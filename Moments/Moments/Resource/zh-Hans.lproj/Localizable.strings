@@ -7,3 +7,8 @@
 */
 // Internal Menu
 "internalMenu.designKitDemo" = "DesignKit 范例";
+
+
+// Development messages
+"development.graphqlPath" = "/graphql";
+"development.token" = "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";
