@@ -41,11 +41,18 @@ class ViewController: BaseViewController {
     @objc func push() {
 //        self.navigationController?.pushViewController(InternalMenuViewController(), animated: true)
 //        self.present(InternalMenuViewController(), animated: true, completion: nil)
-        GetMomentsByUserIDSession().getMoments(userID: 10).subscribe { event in
-            print(event)
-        } onError: { error in
-            print(error)
-        }.disposed(by: posebag )
+//        GetMomentsByUserIDSession().getMoments(userID: 10).subscribe { event in
+//            print(event)
+//        } onError: { error in
+//            print(error)
+//        }.disposed(by: posebag )
+        MomentsRepo.shared.getMoments(userID: 10).subscribe { ev in
+            print(ev)
+        }
+        MomentsRepo.shared.momentsDetails.subscribe(onNext: {
+            print($0)
+        }).disposed(by: posebag)
+        
         let router = AppRouter.shared
         router.route(to: URL(string: "\(UniversalLinks.baseURL)InternalMenu"), from: self, using: .show)
     }

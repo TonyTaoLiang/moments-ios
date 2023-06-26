@@ -9,13 +9,11 @@ import Foundation
 import RxSwift
 
 struct UserDefaultsPersistentDataStore: PersistentDataStoreType {
-    
     static let shared: UserDefaultsPersistentDataStore = .init()
     private(set) var momentsDetails: ReplaySubject<Viewer> = ReplaySubject.create(bufferSize: 1)
     private let disposeBage: DisposeBag = .init()
     private let defaults = UserDefaults.standard
     private let momentsDetailsKey = String(describing: Viewer.self)
-    
     private init() {
         setupBindings()
     }
@@ -27,7 +25,6 @@ struct UserDefaultsPersistentDataStore: PersistentDataStoreType {
 }
 
 extension UserDefaultsPersistentDataStore {
-    
     func setupBindings() {
         defaults.rx.observe(Data.self, momentsDetailsKey)
             .compactMap { $0 }
