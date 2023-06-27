@@ -14,7 +14,7 @@ internal enum L10n {
   internal enum Development {
     /// /graphql
     internal static let graphqlPath = L10n.tr("Localizable", "development.graphqlPath")
-    /// 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
+    /// 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
     internal static let token = L10n.tr("Localizable", "development.token")
   }
 

@@ -20,6 +20,9 @@
 		3FAE3E9B28F187E900649B07 /* InternalMenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3E9A28F187E900649B07 /* InternalMenuCellType.swift */; };
 		3FAE3E9D28F189CE00649B07 /* InternalMenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3E9C28F189CE00649B07 /* InternalMenuItemViewModel.swift */; };
 		3FB8B87428E6E077009E3AF1 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB8B87228E6E077009E3AF1 /* Pods_Moments.framework */; };
+		96020A1F2A49684E00FCB8A6 /* PersistentDataStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96020A1E2A49684E00FCB8A6 /* PersistentDataStoreType.swift */; };
+		96020A212A496B7B00FCB8A6 /* UserDefaultsPersistentDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96020A202A496B7B00FCB8A6 /* UserDefaultsPersistentDataStore.swift */; };
+		96020A242A49718D00FCB8A6 /* MomentsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96020A232A49718D00FCB8A6 /* MomentsRepo.swift */; };
 		9606D1E9290FC497003CE7AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9606D1EB290FC497003CE7AA /* Localizable.strings */; };
 		9606D1EE290FCB28003CE7AA /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9606D1ED290FCB28003CE7AA /* Strings.swift */; };
 		96BDC614294AC03F0071FDC6 /* GetMomentsByUserIDSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDC613294AC03F0071FDC6 /* GetMomentsByUserIDSession.swift */; };
@@ -105,6 +108,9 @@
 		3FBC1F9028D9FB8B007FA86A /* BaseTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BaseTarget.xcconfig; sourceTree = "<group>"; };
 		693A65526DD7F71C389630B2 /* Pods-MomentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.release.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		77A43233DB2989BBA7D5F58B /* Pods-MomentsTests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentsTests.appstore.xcconfig"; path = "Target Support Files/Pods-MomentsTests/Pods-MomentsTests.appstore.xcconfig"; sourceTree = "<group>"; };
+		96020A1E2A49684E00FCB8A6 /* PersistentDataStoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataStoreType.swift; sourceTree = "<group>"; };
+		96020A202A496B7B00FCB8A6 /* UserDefaultsPersistentDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentDataStore.swift; sourceTree = "<group>"; };
+		96020A232A49718D00FCB8A6 /* MomentsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsRepo.swift; sourceTree = "<group>"; };
 		9606D1EA290FC497003CE7AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9606D1EC290FC4C0003CE7AA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9606D1ED290FCB28003CE7AA /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -247,6 +253,7 @@
 		3F9F276A28EED06D006FB6C1 /* Foundations */ = {
 			isa = PBXGroup;
 			children = (
+				96020A1D2A49683300FCB8A6 /* DataStore */,
 				96CA54C22949B03600E17691 /* Networking */,
 				96CB54A3290932B300F87421 /* Extensions */,
 				96CB549629091B0800F87421 /* Routing */,
@@ -314,6 +321,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		96020A1D2A49683300FCB8A6 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				96020A1E2A49684E00FCB8A6 /* PersistentDataStoreType.swift */,
+				96020A202A496B7B00FCB8A6 /* UserDefaultsPersistentDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		96020A222A49717E00FCB8A6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				96020A232A49718D00FCB8A6 /* MomentsRepo.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		9606D1E4290FBF7B003CE7AA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +367,7 @@
 		96CA54BC29499D9A00E17691 /* Moments */ = {
 			isa = PBXGroup;
 			children = (
+				96020A222A49717E00FCB8A6 /* Repositories */,
 				96BDC612294ABFF70071FDC6 /* Networking */,
 				96CA54BD29499DB800E17691 /* Models */,
 			);
@@ -698,6 +723,7 @@
 				96DB82BF28F2B48000882982 /* InternalMenuDescriptionCell.swift in Sources */,
 				96E97257290BCFA300F488F8 /* BaseViewController.swift in Sources */,
 				96DB82C128F2B5A300882982 /* InternalMenuActionTriggerCell.swift in Sources */,
+				96020A1F2A49684E00FCB8A6 /* PersistentDataStoreType.swift in Sources */,
 				96CB549C29091D5200F87421 /* RoutingSource.swift in Sources */,
 				96CB54A5290932BF00F87421 /* UIApplicationExtensions.swift in Sources */,
 				3F9F277128EED808006FB6C1 /* InternalTogglesDataStore.swift in Sources */,
@@ -709,8 +735,10 @@
 				96DB82C428F2B8BF00882982 /* Functions.swift in Sources */,
 				96CB549E29091E5600F87421 /* Navigating.swift in Sources */,
 				3F60825728D76183003A7D54 /* SceneDelegate.swift in Sources */,
+				96020A212A496B7B00FCB8A6 /* UserDefaultsPersistentDataStore.swift in Sources */,
 				96CA54C62949B9D600E17691 /* APISession.swift in Sources */,
 				96DB82C828F2D0E200882982 /* InternalMenuSection.swift in Sources */,
+				96020A242A49718D00FCB8A6 /* MomentsRepo.swift in Sources */,
 				96CB549829091C2A00F87421 /* TransitionType.swift in Sources */,
 				3F9F276D28EED089006FB6C1 /* TogglesDataStoreType.swift in Sources */,
 				9606D1EE290FCB28003CE7AA /* Strings.swift in Sources */,
