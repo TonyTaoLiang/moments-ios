@@ -113,3 +113,4 @@ xcuserdata
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,swiftpackagemanager,cocoapods
 Moments/.swiftlint.yml
+Moments/.DS_Store
