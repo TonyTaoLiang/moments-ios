@@ -11,4 +11,5 @@
 
 // Development messages
 "development.graphqlPath" = "/graphql";
-"development.token" = "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";
+"development.token" = "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";
+"development.fatalErrorSubclassToImplement" = "Subclass has to implement this function";

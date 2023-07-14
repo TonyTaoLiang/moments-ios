@@ -41,6 +41,10 @@
 		96CB54A92909401E00F87421 /* InternalMenuDesignKitDemoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB54A82909401E00F87421 /* InternalMenuDesignKitDemoItemViewModel.swift */; };
 		96CB54AB290948D800F87421 /* DesignKitDemoNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB54AA290948D800F87421 /* DesignKitDemoNavigator.swift */; };
 		96CB54AE29094A2700F87421 /* DesignKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB54AD29094A2700F87421 /* DesignKitDemoViewController.swift */; };
+		96DAE5192A614B8B00BD6EF5 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAE5182A614B8B00BD6EF5 /* BaseTableViewController.swift */; };
+		96DAE51C2A614D4400BD6EF5 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAE51B2A614D4400BD6EF5 /* ListViewModel.swift */; };
+		96DAE51E2A614DD100BD6EF5 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAE51D2A614DD100BD6EF5 /* ListItemViewModel.swift */; };
+		96DAE5202A61549400BD6EF5 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAE51F2A61549400BD6EF5 /* ListItemCell.swift */; };
 		96DB82B728F2AB9A00882982 /* InternalMenuDescriptionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DB82B628F2AB9A00882982 /* InternalMenuDescriptionItemViewModel.swift */; };
 		96DB82B928F2ACB500882982 /* InternalMenuActionTriggerItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DB82B828F2ACB500882982 /* InternalMenuActionTriggerItemViewModel.swift */; };
 		96DB82BB28F2AE6F00882982 /* InternalMenuCrashAppItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DB82BA28F2AE6F00882982 /* InternalMenuCrashAppItemViewModel.swift */; };
@@ -130,6 +134,10 @@
 		96CB54A82909401E00F87421 /* InternalMenuDesignKitDemoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuDesignKitDemoItemViewModel.swift; sourceTree = "<group>"; };
 		96CB54AA290948D800F87421 /* DesignKitDemoNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesignKitDemoNavigator.swift; path = Moments/Features/InternalMenu/Routing/DesignKitDemoNavigator.swift; sourceTree = SOURCE_ROOT; };
 		96CB54AD29094A2700F87421 /* DesignKitDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignKitDemoViewController.swift; sourceTree = "<group>"; };
+		96DAE5182A614B8B00BD6EF5 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		96DAE51B2A614D4400BD6EF5 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		96DAE51D2A614DD100BD6EF5 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
+		96DAE51F2A61549400BD6EF5 /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		96DB82B628F2AB9A00882982 /* InternalMenuDescriptionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuDescriptionItemViewModel.swift; sourceTree = "<group>"; };
 		96DB82B828F2ACB500882982 /* InternalMenuActionTriggerItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuActionTriggerItemViewModel.swift; sourceTree = "<group>"; };
 		96DB82BA28F2AE6F00882982 /* InternalMenuCrashAppItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuCrashAppItemViewModel.swift; sourceTree = "<group>"; };
@@ -259,6 +267,7 @@
 				96CB549629091B0800F87421 /* Routing */,
 				96DB82C228F2B8A300882982 /* Utilities */,
 				3F9F276B28EED078006FB6C1 /* Toggles */,
+				96DAE51A2A614D3800BD6EF5 /* ViewModels */,
 				96E97255290BCF8800F488F8 /* Views */,
 			);
 			path = Foundations;
@@ -421,6 +430,15 @@
 			path = Routing;
 			sourceTree = "<group>";
 		};
+		96DAE51A2A614D3800BD6EF5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				96DAE51B2A614D4400BD6EF5 /* ListViewModel.swift */,
+				96DAE51D2A614DD100BD6EF5 /* ListItemViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		96DB82C228F2B8A300882982 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +452,8 @@
 			isa = PBXGroup;
 			children = (
 				96E97256290BCFA300F488F8 /* BaseViewController.swift */,
+				96DAE5182A614B8B00BD6EF5 /* BaseTableViewController.swift */,
+				96DAE51F2A61549400BD6EF5 /* ListItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -719,6 +739,7 @@
 			files = (
 				3F60825928D76183003A7D54 /* ViewController.swift in Sources */,
 				3F60825528D76183003A7D54 /* AppDelegate.swift in Sources */,
+				96DAE51C2A614D4400BD6EF5 /* ListViewModel.swift in Sources */,
 				96DB82BD28F2B14000882982 /* InternalMenuFeatureToggleItemViewModel.swift in Sources */,
 				96DB82BF28F2B48000882982 /* InternalMenuDescriptionCell.swift in Sources */,
 				96E97257290BCFA300F488F8 /* BaseViewController.swift in Sources */,
@@ -731,6 +752,7 @@
 				96CA54C12949A9C400E17691 /* Configuration.swift in Sources */,
 				96DB82CA28F2D29500882982 /* InternalMenuViewModel.swift in Sources */,
 				96DB82B728F2AB9A00882982 /* InternalMenuDescriptionItemViewModel.swift in Sources */,
+				96DAE5192A614B8B00BD6EF5 /* BaseTableViewController.swift in Sources */,
 				96DB82B928F2ACB500882982 /* InternalMenuActionTriggerItemViewModel.swift in Sources */,
 				96DB82C428F2B8BF00882982 /* Functions.swift in Sources */,
 				96CB549E29091E5600F87421 /* Navigating.swift in Sources */,
@@ -751,10 +773,12 @@
 				96CB549A29091CB200F87421 /* UniversalLinks.swift in Sources */,
 				96CB54A02909210C00F87421 /* AppRouting.swift in Sources */,
 				3FAE3E9D28F189CE00649B07 /* InternalMenuItemViewModel.swift in Sources */,
+				96DAE5202A61549400BD6EF5 /* ListItemCell.swift in Sources */,
 				96DB82C628F2BBF900882982 /* InternalMenuFeatureToggleCell.swift in Sources */,
 				96BDC614294AC03F0071FDC6 /* GetMomentsByUserIDSession.swift in Sources */,
 				96DB82BB28F2AE6F00882982 /* InternalMenuCrashAppItemViewModel.swift in Sources */,
 				96CB54AE29094A2700F87421 /* DesignKitDemoViewController.swift in Sources */,
+				96DAE51E2A614DD100BD6EF5 /* ListItemViewModel.swift in Sources */,
 				96CB54A72909357300F87421 /* InternalMenuNavigator.swift in Sources */,
 				96CA54C42949B03F00E17691 /* API.swift in Sources */,
 			);
