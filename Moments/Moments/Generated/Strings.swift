@@ -12,11 +12,13 @@ import Foundation
 internal enum L10n {
 
   internal enum Development {
+    /// init(coder:) has not been implemented
+    internal static let fatalErrorInitCoderNotImplemented = L10n.tr("Localizable", "development.fatalErrorInitCoderNotImplemented")
     /// Subclass has to implement this function
     internal static let fatalErrorSubclassToImplement = L10n.tr("Localizable", "development.fatalErrorSubclassToImplement")
     /// /graphql
     internal static let graphqlPath = L10n.tr("Localizable", "development.graphqlPath")
-    /// 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
+    /// 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
     internal static let token = L10n.tr("Localizable", "development.token")
   }
 

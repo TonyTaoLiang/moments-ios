@@ -17,6 +17,14 @@
 		3F9F276D28EED089006FB6C1 /* TogglesDataStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F276C28EED089006FB6C1 /* TogglesDataStoreType.swift */; };
 		3F9F276F28EED18E006FB6C1 /* BuildTargetTogglesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F276E28EED18E006FB6C1 /* BuildTargetTogglesDataStore.swift */; };
 		3F9F277128EED808006FB6C1 /* InternalTogglesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F277028EED808006FB6C1 /* InternalTogglesDataStore.swift */; };
+		3FA18C312A6244270096518C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA18C302A6244260096518C /* BaseTableViewCell.swift */; };
+		3FA18C332A6247DC0096518C /* BaseListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA18C322A6247DC0096518C /* BaseListItemView.swift */; };
+		3FA18C352A6247FC0096518C /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA18C342A6247FC0096518C /* ListItemView.swift */; };
+		3FA18C382A624AD90096518C /* MomentsTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA18C372A624AD90096518C /* MomentsTimelineViewController.swift */; };
+		3FA18C3B2A624C700096518C /* MomentsTimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA18C3A2A624C700096518C /* MomentsTimelineViewModel.swift */; };
+		3FA18C3D2A624F540096518C /* MomentListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA18C3C2A624F540096518C /* MomentListItemViewModel.swift */; };
+		3FA18C3F2A625C390096518C /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA18C3E2A625C390096518C /* UserDataStore.swift */; };
+		3FA18C412A625D190096518C /* MomentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA18C402A625D190096518C /* MomentListItemView.swift */; };
 		3FAE3E9B28F187E900649B07 /* InternalMenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3E9A28F187E900649B07 /* InternalMenuCellType.swift */; };
 		3FAE3E9D28F189CE00649B07 /* InternalMenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE3E9C28F189CE00649B07 /* InternalMenuItemViewModel.swift */; };
 		3FB8B87428E6E077009E3AF1 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB8B87228E6E077009E3AF1 /* Pods_Moments.framework */; };
@@ -95,6 +103,14 @@
 		3F9F276C28EED089006FB6C1 /* TogglesDataStoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglesDataStoreType.swift; sourceTree = "<group>"; };
 		3F9F276E28EED18E006FB6C1 /* BuildTargetTogglesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildTargetTogglesDataStore.swift; sourceTree = "<group>"; };
 		3F9F277028EED808006FB6C1 /* InternalTogglesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalTogglesDataStore.swift; sourceTree = "<group>"; };
+		3FA18C302A6244260096518C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		3FA18C322A6247DC0096518C /* BaseListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListItemView.swift; sourceTree = "<group>"; };
+		3FA18C342A6247FC0096518C /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		3FA18C372A624AD90096518C /* MomentsTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsTimelineViewController.swift; sourceTree = "<group>"; };
+		3FA18C3A2A624C700096518C /* MomentsTimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsTimelineViewModel.swift; sourceTree = "<group>"; };
+		3FA18C3C2A624F540096518C /* MomentListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentListItemViewModel.swift; sourceTree = "<group>"; };
+		3FA18C3E2A625C390096518C /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		3FA18C402A625D190096518C /* MomentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentListItemView.swift; sourceTree = "<group>"; };
 		3FAE3E9A28F187E900649B07 /* InternalMenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuCellType.swift; sourceTree = "<group>"; };
 		3FAE3E9C28F189CE00649B07 /* InternalMenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalMenuItemViewModel.swift; sourceTree = "<group>"; };
 		3FB8B87228E6E077009E3AF1 /* Pods_Moments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Moments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +299,24 @@
 			path = Toggles;
 			sourceTree = "<group>";
 		};
+		3FA18C362A624ACB0096518C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FA18C372A624AD90096518C /* MomentsTimelineViewController.swift */,
+				3FA18C402A625D190096518C /* MomentListItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3FA18C392A624B440096518C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3FA18C3A2A624C700096518C /* MomentsTimelineViewModel.swift */,
+				3FA18C3C2A624F540096518C /* MomentListItemViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		3FAE3E9528F1867400649B07 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +369,7 @@
 			children = (
 				96020A1E2A49684E00FCB8A6 /* PersistentDataStoreType.swift */,
 				96020A202A496B7B00FCB8A6 /* UserDefaultsPersistentDataStore.swift */,
+				3FA18C3E2A625C390096518C /* UserDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -376,6 +411,8 @@
 		96CA54BC29499D9A00E17691 /* Moments */ = {
 			isa = PBXGroup;
 			children = (
+				3FA18C392A624B440096518C /* ViewModels */,
+				3FA18C362A624ACB0096518C /* Views */,
 				96020A222A49717E00FCB8A6 /* Repositories */,
 				96BDC612294ABFF70071FDC6 /* Networking */,
 				96CA54BD29499DB800E17691 /* Models */,
@@ -454,6 +491,9 @@
 				96E97256290BCFA300F488F8 /* BaseViewController.swift */,
 				96DAE5182A614B8B00BD6EF5 /* BaseTableViewController.swift */,
 				96DAE51F2A61549400BD6EF5 /* ListItemCell.swift */,
+				3FA18C302A6244260096518C /* BaseTableViewCell.swift */,
+				3FA18C342A6247FC0096518C /* ListItemView.swift */,
+				3FA18C322A6247DC0096518C /* BaseListItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -738,6 +778,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F60825928D76183003A7D54 /* ViewController.swift in Sources */,
+				3FA18C412A625D190096518C /* MomentListItemView.swift in Sources */,
 				3F60825528D76183003A7D54 /* AppDelegate.swift in Sources */,
 				96DAE51C2A614D4400BD6EF5 /* ListViewModel.swift in Sources */,
 				96DB82BD28F2B14000882982 /* InternalMenuFeatureToggleItemViewModel.swift in Sources */,
@@ -746,15 +787,19 @@
 				96DB82C128F2B5A300882982 /* InternalMenuActionTriggerCell.swift in Sources */,
 				96020A1F2A49684E00FCB8A6 /* PersistentDataStoreType.swift in Sources */,
 				96CB549C29091D5200F87421 /* RoutingSource.swift in Sources */,
+				3FA18C3D2A624F540096518C /* MomentListItemViewModel.swift in Sources */,
 				96CB54A5290932BF00F87421 /* UIApplicationExtensions.swift in Sources */,
 				3F9F277128EED808006FB6C1 /* InternalTogglesDataStore.swift in Sources */,
 				96CA54BF29499DD400E17691 /* MomentsDetails.swift in Sources */,
 				96CA54C12949A9C400E17691 /* Configuration.swift in Sources */,
+				3FA18C312A6244270096518C /* BaseTableViewCell.swift in Sources */,
 				96DB82CA28F2D29500882982 /* InternalMenuViewModel.swift in Sources */,
 				96DB82B728F2AB9A00882982 /* InternalMenuDescriptionItemViewModel.swift in Sources */,
 				96DAE5192A614B8B00BD6EF5 /* BaseTableViewController.swift in Sources */,
 				96DB82B928F2ACB500882982 /* InternalMenuActionTriggerItemViewModel.swift in Sources */,
+				3FA18C3B2A624C700096518C /* MomentsTimelineViewModel.swift in Sources */,
 				96DB82C428F2B8BF00882982 /* Functions.swift in Sources */,
+				3FA18C3F2A625C390096518C /* UserDataStore.swift in Sources */,
 				96CB549E29091E5600F87421 /* Navigating.swift in Sources */,
 				3F60825728D76183003A7D54 /* SceneDelegate.swift in Sources */,
 				96020A212A496B7B00FCB8A6 /* UserDefaultsPersistentDataStore.swift in Sources */,
@@ -767,7 +812,9 @@
 				3F9F276F28EED18E006FB6C1 /* BuildTargetTogglesDataStore.swift in Sources */,
 				96DB82CC28F2D88500882982 /* InternalMenuViewController.swift in Sources */,
 				96CB54A92909401E00F87421 /* InternalMenuDesignKitDemoItemViewModel.swift in Sources */,
+				3FA18C382A624AD90096518C /* MomentsTimelineViewController.swift in Sources */,
 				96CB54AB290948D800F87421 /* DesignKitDemoNavigator.swift in Sources */,
+				3FA18C332A6247DC0096518C /* BaseListItemView.swift in Sources */,
 				96CB54A2290930F300F87421 /* AppRouter.swift in Sources */,
 				3FAE3E9B28F187E900649B07 /* InternalMenuCellType.swift in Sources */,
 				96CB549A29091CB200F87421 /* UniversalLinks.swift in Sources */,
@@ -778,6 +825,7 @@
 				96BDC614294AC03F0071FDC6 /* GetMomentsByUserIDSession.swift in Sources */,
 				96DB82BB28F2AE6F00882982 /* InternalMenuCrashAppItemViewModel.swift in Sources */,
 				96CB54AE29094A2700F87421 /* DesignKitDemoViewController.swift in Sources */,
+				3FA18C352A6247FC0096518C /* ListItemView.swift in Sources */,
 				96DAE51E2A614DD100BD6EF5 /* ListItemViewModel.swift in Sources */,
 				96CB54A72909357300F87421 /* InternalMenuNavigator.swift in Sources */,
 				96CA54C42949B03F00E17691 /* API.swift in Sources */,
